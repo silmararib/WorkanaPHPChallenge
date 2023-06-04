@@ -1,0 +1,17 @@
+{
+    "name": "silmara/market-api",
+    "description": "API to register a market's sales.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Silmara\\MarketApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Silmara Ribeiro",
+            "email": "silmara.ribeiro@gmail.com"
+        }
+    ],
+    "require": {}
+}
