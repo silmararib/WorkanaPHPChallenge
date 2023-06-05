@@ -4,19 +4,19 @@ namespace Silmara\MarketApi\controller;
 
 abstract class Controller
 {
-    public function processingRequest(){
+    public function processingRequest(): void {
         $this->checkInnerRoutes();
         $this->processingMethod();
     }
 
-    protected function checkInnerRoutes() {
+    protected function checkInnerRoutes(): void {
         if (sizeof(array_filter(explode("/", $_SERVER['REQUEST_URI']))) > 1) {
             http_response_code(404);
             exit();
         }
     }
 
-    protected function processingMethod() {
+    protected function processingMethod(): void {
         $method = $_SERVER['REQUEST_METHOD'];
         $data = json_decode(file_get_contents('php://input'), true);
 
@@ -37,7 +37,7 @@ abstract class Controller
         }
     }
 
-    protected function isContentValid(array $data): bool {
+    protected function isContentValid($data): bool {
         return ($data != null) && (sizeof($data) > 0);
     }
 

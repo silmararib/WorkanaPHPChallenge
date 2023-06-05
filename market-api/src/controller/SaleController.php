@@ -2,6 +2,8 @@
 
 namespace Silmara\MarketApi\controller;
 
+use Silmara\MarketApi\domain\Sale;
+
 class SaleController extends Controller
 {
     protected function getRequest()
@@ -9,8 +11,14 @@ class SaleController extends Controller
         // TODO: Implement getRequest() method.
     }
 
-    protected function postRequest(array $data)
+    protected function postRequest(array $data): void
     {
-        // TODO: Implement postRequest() method.
+        $sale = new Sale($data['total'], $data['tax']);
+    }
+
+    protected function isContentValid($data): bool {
+        return parent::isContentValid($data) &&
+            array_key_exists('total', $data) &&
+            array_key_exists('tax', $data);
     }
 }
