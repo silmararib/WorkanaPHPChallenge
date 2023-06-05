@@ -1,6 +1,7 @@
 <?php
 
 require_once '../vendor/autoload.php';
-use Silmara\MarketApi\controller\Router;
+
+use Silmara\MarketApi\domain\controller\Router;
 
 Router::routing();

@@ -1,6 +1,6 @@
 <?php
 
-namespace Silmara\MarketApi\domain;
+namespace Silmara\MarketApi\domain\model;
 
 class Sale
 {

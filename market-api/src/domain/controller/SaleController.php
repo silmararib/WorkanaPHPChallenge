@@ -1,8 +1,8 @@
 <?php
 
-namespace Silmara\MarketApi\controller;
+namespace Silmara\MarketApi\domain\controller;
 
-use Silmara\MarketApi\domain\Sale;
+use Silmara\MarketApi\domain\model\Sale;
 
 class SaleController extends Controller
 {

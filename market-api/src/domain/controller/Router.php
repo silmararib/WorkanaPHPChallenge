@@ -1,6 +1,6 @@
 <?php
 
-namespace Silmara\MarketApi\controller;
+namespace Silmara\MarketApi\domain\controller;
 
 final class Router
 {
