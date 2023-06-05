@@ -2,17 +2,15 @@
 
 namespace Silmara\MarketApi\controller;
 
-class ProductTypeController
+class ProductTypeController extends Controller
 {
-    // Prevents the class to be instantiated
-    private function __construct(){}
-
-    public static function processingRequest(){
-        /*  /product-types  */
-        if (sizeof(array_filter(explode("/", $_SERVER['REQUEST_URI']))) > 1) {
-            echo "Route not found";
-            exit();
-        }
+    protected function getRequest()
+    {
+        // TODO: Implement getRequest() method.
     }
 
+    protected function postRequest(array $data)
+    {
+        // TODO: Implement postRequest() method.
+    }
 }

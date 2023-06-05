@@ -2,19 +2,31 @@
 
 namespace Silmara\MarketApi\controller;
 
-final class Controller
+abstract class Controller
 {
-    // Prevents the class to be instantiated
-    private function __construct(){}
+    public function processingRequest(){
+        $this->checkInnerRoutes();
+        $this->processingMethod();
+    }
 
-    public static function routing() {
-        $route = array_values(array_filter(explode("/", $_SERVER['REQUEST_URI'])))[0];
-
-        switch($route) {
-            case 'products': { ProductController::processingRequest(); break; }
-            case 'product-types': { ProductTypeController::processingRequest(); break; }
-            case 'sales': { SaleController::processingRequest(); break; }
-            default: echo "Route not found";
+    protected function checkInnerRoutes() {
+        if (sizeof(array_filter(explode("/", $_SERVER['REQUEST_URI']))) > 1) {
+            echo "Route not found";
+            exit();
         }
     }
+
+    protected function processingMethod() {
+        $method = $_SERVER['REQUEST_METHOD'];
+        $data = json_decode(file_get_contents('php://input'), true);
+
+        switch ($method) {
+            case 'GET': { $this->getRequest(); break; }
+            case 'POST': { $this->postRequest($data); break; }
+            default: echo "Method not allowed";
+        }
+    }
+
+    abstract protected function getRequest();
+    abstract protected function postRequest(array $data);
 }
