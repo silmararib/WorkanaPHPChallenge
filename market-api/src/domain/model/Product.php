@@ -9,12 +9,12 @@ class Product
     private float $unitPrice;
     private string $type;
 
-    public function __construct($code, $description, $unitPrice, $type)
+    public function __construct($data)
     {
-        $this->code = $code;
-        $this->description = $description;
-        $this->unitPrice = $unitPrice;
-        $this->type = $type;
+        $this->code = $data['code'];
+        $this->description = $data['description'];
+        $this->unitPrice = $data['unit_price'];
+        $this->type = $data['type'];
     }
 
     public function getCode(): string

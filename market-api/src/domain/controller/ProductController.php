@@ -17,13 +17,12 @@ class ProductController extends Controller
     protected function getRequest(): void
     {
         $list = $this->repository->getAll();
-        $json = json_encode($list);
-        echo $json;
+        echo json_encode($list);
     }
 
     protected function postRequest(array $data): void
     {
-        $product = new Product($data['code'], $data['description'], $data['unit_price'], $data['type']);
+        $product = new Product($data);
         if (!$this->repository->post($product)) {
             http_response_code(500);
             exit();

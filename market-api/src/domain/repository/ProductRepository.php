@@ -23,7 +23,7 @@ class ProductRepository
 
     public function post(Product $product): bool
     {
-        $sql = 'INSERT INTO products(code, description, unit_price, id_product_type) VALUES (?, ?, ?, ?)';
+        $sql = 'INSERT INTO products(code, description, unit_price, id_product_type) VALUES (?, ?, ?, ?) RETURNING id';
         $statement = $this->pdo->prepare($sql);
         $statement->bindValue(1, $product->getCode());
         $statement->bindValue(2, $product->getDescription());

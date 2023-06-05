@@ -8,11 +8,11 @@ class ProductType
     private string $description;
     private float $taxRate;
 
-    public function __construct($code, $description, $taxRate)
+    public function __construct($data)
     {
-        $this->code = $code;
-        $this->description = $description;
-        $this->taxRate = $taxRate;
+        $this->code = $data['code'];
+        $this->description = $data['description'];
+        $this->taxRate = $data['tax_rate'];
     }
 
     public function getCode(): string
