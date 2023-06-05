@@ -8,13 +8,14 @@ final class Router
     private function __construct(){}
 
     public static function routing() {
-        $route = array_values(array_filter(explode("/", $_SERVER['REQUEST_URI'])))[0];
+        $uri = array_values(array_filter(explode("/", $_SERVER['REQUEST_URI'])));
+        $route = sizeof($uri) > 0 ? $uri[0] : '';
 
         switch($route) {
             case 'products': { (new ProductController())->processingRequest(); break; }
             case 'product-types': { (new ProductTypeController())->processingRequest(); break; }
             case 'sales': { (new SaleController())->processingRequest(); break; }
-            default: echo "Route not found";
+            default: http_response_code(404);
         }
     }
 }
