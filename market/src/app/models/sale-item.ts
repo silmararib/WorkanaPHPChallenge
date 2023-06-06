@@ -1,8 +1,8 @@
 export interface SaleItem {
-    id: string,
+    id?: string,
     quantity: number,
     price: number,
     tax: number,
     id_product: string,
-    id_sale: string
+    id_sale?: string
 }

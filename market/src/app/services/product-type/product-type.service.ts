@@ -17,4 +17,8 @@ export class ProductTypeService {
   list(): Observable<ProductType[]> {
     return this.http.get<ProductType[]>(this.apiUrl)
   }
+
+  save(type: ProductType): Observable<ProductType> {    
+    return this.http.post<ProductType>(this.apiUrl, type);
+  }
 }

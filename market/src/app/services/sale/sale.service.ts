@@ -17,4 +17,8 @@ export class SaleService {
   list(): Observable<Sale[]> {
     return this.http.get<Sale[]>(this.apiUrl)
   }
+
+  save(sale: Sale): Observable<Sale> {
+    return this.http.post<Sale>(this.apiUrl, sale);
+  }
 }

@@ -1,5 +1,5 @@
 export interface ProductType {
-    id: string,
+    id?: string,
     code: string,
     description: string,
     tax_rate: number

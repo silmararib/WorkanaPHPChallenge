@@ -1,9 +1,9 @@
 import { SaleItem } from "./sale-item";
 
 export interface Sale {
-    id: string,
+    id?: string,
     total: number,
     tax: number,
-    date_time: string,
+    date_time?: string,
     items: SaleItem[];
 }
