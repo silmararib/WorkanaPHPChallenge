@@ -11,6 +11,7 @@ import { HomeModule } from './components/home/home.module';
 import { ProductModule } from './components/product/product.module';
 import { ProductTypeModule } from './components/product-type/product-type.module';
 import { SaleModule } from './components/sale/sale.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SaleModule } from './components/sale/sale.module';
     HomeModule,
     ProductModule,
     ProductTypeModule,
-    SaleModule
+    SaleModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
