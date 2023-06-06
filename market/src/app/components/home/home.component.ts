@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {NgFor} from '@angular/common';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { NgFor } from '@angular/common';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 export interface Tile {
   color: string;
@@ -19,8 +19,8 @@ export interface Tile {
 export class HomeComponent {
 
   tiles: Tile[] = [
-    {text: 'Sale', cols: 4, rows: 1, color: '#e27809'},
-    {text: 'Product', cols: 2, rows: 1, color: '#e99f51'},
-    {text: 'Product Type', cols: 2, rows: 1, color: '#e99f51'},
+    {text: 'Sale', cols: 4, rows: 1, color: '#d9b6a3'},
+    {text: 'Product', cols: 2, rows: 1, color: '#d9b6a3'},
+    {text: 'Product Type', cols: 2, rows: 1, color: '#d9b6a3'},
   ];
 }
