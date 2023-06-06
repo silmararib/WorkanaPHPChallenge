@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-registration.component.css']
 })
 export class ProductRegistrationComponent {
-
 }
