@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { ProductTypeRegistrationComponent } from './components/product-type/product-type-registration/product-type-registration.component';
 import { ProductRegistrationComponent } from './components/product/product-registration/product-registration.component';
 import { SaleRegistrationComponent } from './components/sale/sale-registration/sale-registration.component';
-import { HomeModule } from './components/home/home.module';
+import { HomeComponent } from './components/home/home.component';
 import { ProductModule } from './components/product/product.module';
 import { ProductTypeModule } from './components/product-type/product-type.module';
 import { SaleModule } from './components/sale/sale.module';
@@ -24,7 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HomeModule,
+    HomeComponent,
     ProductModule,
     ProductTypeModule,
     SaleModule,

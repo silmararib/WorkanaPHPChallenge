@@ -1,1 +1,18 @@
-<p>home works!</p>
+<mat-grid-tile-header>
+Header
+</mat-grid-tile-header>
+
+<section>
+    <mat-grid-list cols="4" rowHeight="300px" gutterSize="10px">
+        <mat-grid-tile
+            *ngFor="let tile of tiles"
+            [colspan]="tile.cols"
+            [rowspan]="tile.rows"
+            [style.background]="tile.color">
+        {{tile.text}}
+        </mat-grid-tile>
+    </mat-grid-list>
+</section>
+<mat-grid-tile-footer>
+Footer
+</mat-grid-tile-footer>
