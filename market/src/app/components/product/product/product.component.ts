@@ -14,7 +14,7 @@ import { Product } from './../../../models/product';
 export class ProductComponent {
   
   list: Product[] = [];
-  displayedColumns: string[] = ['code', 'description', 'unit_price'];
+  displayedColumns: string[] = ['code', 'description', 'unit_price', 'type_description', 'tax_rate'];
 
   constructor( private service: ProductService ){}
 

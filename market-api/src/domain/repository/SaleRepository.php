@@ -31,7 +31,7 @@ class SaleRepository
     public function getItems(array $sale): array
     {
         $id = $sale['id'];
-        $sqlQuery = "SELECT si.*, pt.tax_rate, p.code as product_code, p.description as product_description
+        $sqlQuery = "SELECT si.*, pt.tax_rate, p.code as product_code, p.description as product_description, p.unit_price
                      FROM sale_items si INNER JOIN products p ON p.id = si.id_product
                      INNER JOIN product_types pt ON pt.id = p.id_product_type
                      WHERE id_sale = '$id';";

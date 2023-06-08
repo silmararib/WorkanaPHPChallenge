@@ -20,6 +20,16 @@
         <td mat-cell *matCellDef="let element"> R$ {{ element.unit_price }} </td>
     </ng-container>
 
+    <ng-container matColumnDef="type_description">
+        <th mat-header-cell *matHeaderCellDef> Tipo de Produto</th>
+        <td mat-cell *matCellDef="let element"> {{ element.type_code }}  - {{ element.type_description }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tax_rate">
+        <th mat-header-cell *matHeaderCellDef> Imposto (%) </th>
+        <td mat-cell *matCellDef="let element"> {{ element.tax_rate }} % </td>
+    </ng-container>
+
     <ng-container matColumnDef="type">
         <th mat-header-cell *matHeaderCellDef> type </th>
         <td mat-cell *matCellDef="let element"> {{ element.type }} </td>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { SaleItem } from 'src/app/models/sale-item';
 
@@ -11,7 +11,7 @@ import { SaleItem } from 'src/app/models/sale-item';
 })
 export class SaleItemComponent {
   
-  list: SaleItem[] = [];
-  displayedColumns: string[] = ['quantity', 'price', 'tax'];
+  @Input() list: SaleItem[] = [];
+  displayedColumns: string[] = ['code', 'product', 'unit_price', 'quantity', 'price', 'tax_rate', 'tax'];
   
 }

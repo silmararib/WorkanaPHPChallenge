@@ -5,6 +5,21 @@
         <td mat-cell *matCellDef="let element"> {{ element.id }} </td>
     </ng-container>
 
+    <ng-container matColumnDef="code">
+        <th mat-header-cell *matHeaderCellDef> Código </th>
+        <td mat-cell *matCellDef="let element"> {{ element.product_code }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="product">
+        <th mat-header-cell *matHeaderCellDef> Produto </th>
+        <td mat-cell *matCellDef="let element"> {{ element.product_description }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="unit_price">
+        <th mat-header-cell *matHeaderCellDef> Valor Unitário </th>
+        <td mat-cell *matCellDef="let element"> {{ element.unit_price }} </td>
+    </ng-container>
+
     <ng-container matColumnDef="quantity">
         <th mat-header-cell *matHeaderCellDef> Quantidade </th>
         <td mat-cell *matCellDef="let element"> {{ element.quantity }} </td>
@@ -18,6 +33,11 @@
     <ng-container matColumnDef="tax">
         <th mat-header-cell *matHeaderCellDef> Impostos (R$)</th>
         <td mat-cell *matCellDef="let element"> R$ {{ element.tax }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tax_rate">
+        <th mat-header-cell *matHeaderCellDef> Impostos (%)</th>
+        <td mat-cell *matCellDef="let element"> {{ element.tax_rate }} % </td>
     </ng-container>
 
     <ng-container matColumnDef="id_product">

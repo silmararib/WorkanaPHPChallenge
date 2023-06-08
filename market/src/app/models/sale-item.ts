@@ -7,5 +7,6 @@ export interface SaleItem {
     id_sale?: string,
     tax_rate?: number,
     product_code?: string,
-    product_description?: string
+    product_description?: string,
+    unit_price?: number
 }
