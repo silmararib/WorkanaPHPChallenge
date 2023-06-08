@@ -17,7 +17,9 @@ class ProductRepository
 
     public function getAll(): array
     {
-        $sqlQuery = 'SELECT * FROM products;';
+        $sqlQuery = 'SELECT p.*, pt.tax_rate, pt.code as type_code, pt.description as type_description 
+                     FROM products p INNER JOIN product_types pt ON pt.id = p.id_product_type
+                     ORDER BY p.code;';
         return $this->pdo->query($sqlQuery)->fetchAll();
     }
 

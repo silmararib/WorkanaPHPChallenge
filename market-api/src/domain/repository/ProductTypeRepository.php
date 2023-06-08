@@ -17,7 +17,7 @@ class ProductTypeRepository
 
     public function getAll(): array
     {
-        $sqlQuery = 'SELECT * FROM product_types;';
+        $sqlQuery = 'SELECT * FROM product_types ORDER BY code;';
         return $this->pdo->query($sqlQuery)->fetchAll();
     }
 

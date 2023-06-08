@@ -14,7 +14,7 @@ class Product
         $this->code = $data['code'];
         $this->description = $data['description'];
         $this->unitPrice = $data['unit_price'];
-        $this->type = $data['type'];
+        $this->type = $data['id_product_type'];
     }
 
     public function getCode(): string

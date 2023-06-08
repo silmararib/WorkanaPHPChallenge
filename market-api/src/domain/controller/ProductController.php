@@ -34,6 +34,6 @@ class ProductController extends Controller
             array_key_exists('code', $data) &&
             array_key_exists('description', $data) &&
             array_key_exists('unit_price', $data) &&
-            array_key_exists('type', $data);
+            array_key_exists('id_product_type', $data);
     }
 }
