@@ -3,5 +3,8 @@ export interface Product {
     code: string,
     description: string,
     unit_price: number,
-    type: string
+    id_product_type: string,
+    tax_rate?: number,
+    type_code?: string,
+    type_description?: string
 }

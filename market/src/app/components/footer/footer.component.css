@@ -1,0 +1,9 @@
+footer {
+    background-color: #304674;
+    color: #c6d3e3;
+    position: absolute;
+    bottom: 0;
+    width: 98%;
+    padding: 1%;
+    height: 3%
+}

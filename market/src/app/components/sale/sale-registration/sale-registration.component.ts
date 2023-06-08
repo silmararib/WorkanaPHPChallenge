@@ -7,7 +7,8 @@ import { SaleItem } from 'src/app/models/sale-item';
 @Component({
   selector: 'app-sale-registration',
   templateUrl: './sale-registration.component.html',
-  styleUrls: ['./sale-registration.component.css']
+  styleUrls: ['./sale-registration.component.css'],
+  standalone: true
 })
 export class SaleRegistrationComponent {
 

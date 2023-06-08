@@ -4,5 +4,8 @@ export interface SaleItem {
     price: number,
     tax: number,
     id_product: string,
-    id_sale?: string
+    id_sale?: string,
+    tax_rate?: number,
+    product_code?: string,
+    product_description?: string
 }

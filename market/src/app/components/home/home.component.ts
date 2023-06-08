@@ -1,26 +1,11 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
-import { MatGridListModule } from '@angular/material/grid-list';
-
-export interface Tile {
-  color: string;
-  cols: number;
-  rows: number;
-  text: string;
-}
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-  standalone: true,
-  imports: [MatGridListModule, NgFor]
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.css'],
+    standalone: true
 })
-export class HomeComponent {
-
-  tiles: Tile[] = [
-    {text: 'Sale', cols: 4, rows: 1, color: '#d9b6a3'},
-    {text: 'Product', cols: 2, rows: 1, color: '#d9b6a3'},
-    {text: 'Product Type', cols: 2, rows: 1, color: '#d9b6a3'},
-  ];
+export class HomeComponent {  
 }
+ 
