@@ -1,0 +1,14 @@
+.left-bar {
+    margin: 1% 1% 1% 1%;
+    flex:2;
+}
+
+.main-area {
+    margin: 1% 1% 1% 1%;
+    flex: 3;
+}
+
+.tab {
+    padding: 1% 5% 1% 5%;
+    display: flex;
+}

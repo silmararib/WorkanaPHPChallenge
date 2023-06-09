@@ -14,7 +14,14 @@ import { ProductType } from './../../../models/product-type';
   templateUrl: './product-type-registration.component.html',
   styleUrls: ['./product-type-registration.component.css'],
   standalone: true,
-  imports: [MatInputModule, MatFormFieldModule, FormsModule, MatButtonModule, MatDividerModule, MatCardModule]
+  imports: [
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatCardModule
+  ]
 })
 export class ProductTypeRegistrationComponent {
   

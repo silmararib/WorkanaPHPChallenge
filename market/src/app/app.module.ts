@@ -15,6 +15,7 @@ import { SaleComponent } from './components/sale/sale/sale.component';
 import { SaleItemComponent } from './components/sale/sale-item/sale-item.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SaleDetailComponent } from './components/sale/sale-detail/sale-detail.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FooterComponent } from './components/footer/footer.component';
     SaleItemComponent,
     ProductTypeRegistrationComponent,
     ProductRegistrationComponent,
-    SaleRegistrationComponent
+    SaleRegistrationComponent,
+    SaleDetailComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

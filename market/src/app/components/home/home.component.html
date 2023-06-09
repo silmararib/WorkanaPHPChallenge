@@ -1,0 +1,45 @@
+<mat-tab-group [backgroundColor]="'primary'">
+    <mat-tab label="NOVA VENDA">
+        <div class="tab">
+                <section colspan="1" class="left-bar">
+
+                </section>
+                <section colspan="3" class="main-area">
+                    
+                </section>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="PRODUTOS">
+        <div class="tab">
+            <section class="left-bar">
+                <app-product-registration></app-product-registration>
+            </section>
+            <section class="main-area">
+                <app-product></app-product>
+            </section>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="TIPOS DE PRODUTOS">
+        <div class="tab">
+            <section class="left-bar">
+                <app-product-type-registration></app-product-type-registration>
+            </section>
+            <section class="main-area">
+                <app-product-type></app-product-type>
+            </section>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="HISTÓRICO DE VENDAS">
+        <div class="tab">
+            <section class="left-bar">
+                <app-sale (onSelectSale)="onSelectSale($event)"></app-sale>
+            </section>
+            <section class="main-area">
+                <app-sale-detail [sale]="this.sale"></app-sale-detail>                
+            </section>
+        </div>
+    </mat-tab>
+</mat-tab-group>
