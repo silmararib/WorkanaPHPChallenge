@@ -7,6 +7,7 @@ import { ProductRegistrationComponent } from '../product/product-registration/pr
 import { SaleComponent } from '../sale/sale/sale.component';
 import { SaleDetailComponent } from '../sale/sale-detail/sale-detail.component';
 import { Sale } from 'src/app/models/sale';
+import { SaleRegistrationComponent } from '../sale/sale-registration/sale-registration.component';
 
 @Component({
     selector: 'app-home',
@@ -20,7 +21,8 @@ import { Sale } from 'src/app/models/sale';
         ProductComponent,
         ProductRegistrationComponent,
         SaleComponent,
-        SaleDetailComponent
+        SaleDetailComponent,
+        SaleRegistrationComponent
     ]
 })
 export class HomeComponent {
