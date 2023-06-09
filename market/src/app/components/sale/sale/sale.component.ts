@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 
 import { SaleService } from './../../../services/sale/sale.service';
 import { Sale } from './../../../models/sale';
-import { SaleItemComponent } from '../sale-item/sale-item.component';
 
 @Component({
   selector: 'app-sale',
@@ -18,7 +17,6 @@ export class SaleComponent {
   list: Sale[] = [];
   displayedColumns: string[] = ['date_time', 'total', 'tax'];
 
-  comp: SaleItemComponent = new SaleItemComponent();
   constructor( private service: SaleService ){}
 
   ngOnInit(): void {

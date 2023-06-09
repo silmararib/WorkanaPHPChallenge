@@ -11,7 +11,7 @@ import { SaleItem } from 'src/app/models/sale-item';
 })
 export class SaleItemComponent {
   
-  @Input() list: SaleItem[] = [];
+  @Input() items: SaleItem[] = [];
+
   displayedColumns: string[] = ['code', 'product', 'unit_price', 'quantity', 'price', 'tax_rate', 'tax'];
-  
 }
